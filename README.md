@@ -3,8 +3,9 @@
 # 原项目 [NFD](https://github.com/LloydAsp/nfd)
 
 ## 基于原项目新增
+- 用户发送消息之前会显示验证码让用户提交
 - 用户发送消息之后机器人返回”发送成功“
-
+- 
 ## 搭建方法
 1. 从[@BotFather](https://t.me/BotFather)获取token，并且可以发送`/setjoingroups`来禁止此Bot被添加到群组
 2. 从[uuidgenerator](https://www.uuidgenerator.net/)获取一个随机uuid作为secret
