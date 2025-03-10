@@ -153,7 +153,7 @@ async function handleGuestMessage(message){
     // 添加发送成功提示
     await sendMessage({
       chat_id: chatId,
-      text: '发送成功✔'
+      text: '发送成功✅'
     })
   }
   return handleNotify(message)
