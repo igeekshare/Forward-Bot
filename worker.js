@@ -147,25 +147,14 @@ async function handleGuestMessage(message){
     message_id:message.message_id
   })
   console.log(JSON.stringify(forwardReq))
-  
   if(forwardReq.ok){
     await nfd.put('msg-map-' + forwardReq.result.message_id, chatId)
     
-    // 发送"发送成功"消息并获取消息ID
-    const successMsg = await sendMessage({
+    // 添加发送成功提示
+    await sendMessage({
       chat_id: chatId,
-      text: '发送成功'
+      text: '发送成功✔'
     })
-    
-    if(successMsg.ok){
-      // 设置5秒后删除消息
-      setTimeout(async () => {
-        await requestTelegram('deleteMessage', makeReqBody({
-          chat_id: chatId,
-          message_id: successMsg.result.message_id
-        }))
-      }, 5000)
-    }
   }
   return handleNotify(message)
 }
