@@ -1,16 +1,9 @@
-# NFD
-No Fraud / Node Forward Bot
-
 一个基于cloudflare worker的telegram 消息转发bot，集成了反欺诈功能
 
-## 特点
-- 基于cloudflare worker搭建，能够实现以下效果
-    - 搭建成本低，一个js文件即可完成搭建
-    - 不需要额外的域名，利用worker自带域名即可
-    - 基于worker kv实现永久数据储存
-    - 稳定，全球cdn转发
-- 接入反欺诈系统，当聊天对象有诈骗历史时，自动发出提醒
-- 支持屏蔽用户，避免被骚扰
+# 原项目 [NFD](https://github.com/LloydAsp/nfd)
+
+## 基于原项目新增
+- 用户发送消息之后机器人返回”发送成功“
 
 ## 搭建方法
 1. 从[@BotFather](https://t.me/BotFather)获取token，并且可以发送`/setjoingroups`来禁止此Bot被添加到群组
